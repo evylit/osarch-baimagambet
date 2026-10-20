@@ -1,7 +1,2 @@
-                        Get-CimInstance Win32_PhysicalMemory | Select-Object BankLabel, @{n='GB';e={$_.Capacity/1GB}}, Speed, ConfiguredClockSpeed, Manufacturer | Format-Table
-
-BankLabel GB Speed ConfiguredClockSpeed Manufacturer
---------- -- ----- -------------------- ------------
-BANK 0     8  5600                 5200 Micron Technology
-BANK 0     8  5600                 5200 Micron Technology
-
+Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType, @{n='SizeGB';e={[math]::Round($_.Size/1GB)}} | Format-Table
+Get-Volume | Where-Object DriveLetter | Select-Object DriveLetter, FileSystemLabel, @{n='SizeGB';e={[math]::Round(_.Size/1GB)}}, @{n='FreeGB';e={[math]::Round(_.SizeRemaining/1GB)}} | Format-Table
