@@ -1,1 +1,21 @@
+PS C:\Windows\system32> $env:firmware_type
+>> (Get-ComputerInfo -Property BiosFirmwareType).BiosFirmwareType
+>>
+>> Get-CimInstance Win32_Processor | Select-Object Name, VirtualizationFirmwareEnabled, SecondLevelAddressTranslationExtensions, VMMonitorModeExtensions | Format-List
+>>
+>> systeminfo | Select-String -Pattern "Hyper-V|Virtualization"
+UEFI
+Uefi
+
+
+Name                                    : Intel(R) Core(TM) 5 210H
+VirtualizationFirmwareEnabled           : True
+SecondLevelAddressTranslationExtensions : True
+VMMonitorModeExtensions                 : True
+
+
+
+
+Требования Hyper-V:               Расширения режима мониторинга виртуальной машины: Да
+
 
