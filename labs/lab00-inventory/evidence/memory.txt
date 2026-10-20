@@ -7,8 +7,6 @@ BANK 0     8  5600                 5200 Micron Technology
 BANK 0     8  5600                 5200 Micron Technology
 
 
-PS C:\Windows\system32>
-
 
 
 
