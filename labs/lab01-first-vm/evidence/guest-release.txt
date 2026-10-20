@@ -1,1 +1,1 @@
-
+ssh baimagambet@127.0.0.1 "lsb_release -a"
