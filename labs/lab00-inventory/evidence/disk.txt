@@ -1,1 +1,7 @@
+                        Get-CimInstance Win32_PhysicalMemory | Select-Object BankLabel, @{n='GB';e={$_.Capacity/1GB}}, Speed, ConfiguredClockSpeed, Manufacturer | Format-Table
+
+BankLabel GB Speed ConfiguredClockSpeed Manufacturer
+--------- -- ----- -------------------- ------------
+BANK 0     8  5600                 5200 Micron Technology
+BANK 0     8  5600                 5200 Micron Technology
 
