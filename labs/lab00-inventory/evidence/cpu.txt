@@ -1,1 +1,7 @@
+PS C:\Windows\system32> Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors | Format-List
+
+
+Name                      : Intel(R) Core(TM) 5 210H
+NumberOfCores             : 8
+NumberOfLogicalProcessors : 12
 
