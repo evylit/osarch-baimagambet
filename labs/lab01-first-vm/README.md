@@ -12,3 +12,6 @@ Lab 1 — Your first virtual machine
 |Snapshot|clean-install(default snapshot)|Taken while powered off|
 |Break method|Option A - deleted /etc/hostname|evidence/broken.png|
 |Rollback|Restored to clean-install |evidence/snapshot-list.png|
+
+## Resource Justification
+Host (from Lab 0):
