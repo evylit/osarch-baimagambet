@@ -71,8 +71,8 @@ Windows Defender Firewall blocks incoming ICMP Echo Requests by default.
 
 | File | Description |
 |------|-------------|
-| `evidence/ipconfig-windows.txt` | Windows IP configuration |
-| `evidence/ip-addr-linux.txt` | Ubuntu IP configuration |
+| `evidence/ipconfig-windows.txt` | Windows IP configuration 10.0.2.15 |
+| `evidence/ip-addr-linux.txt` | Ubuntu IP configuration 10.0.2.14 |
 | `evidence/ping-both-ways.txt` | Ping both directions + internet connectivity from both guests |
 | `evidence/host-memory-before.png` | Host memory with both guests powered off |
 | `evidence/host-memory-after.png` | Host memory under overcommitment (both guests allocated 10 GB) |
