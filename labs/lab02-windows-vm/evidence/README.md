@@ -1,6 +1,6 @@
-| Student| Baimagambet |
-| Pair|Working alone|
-|Machine|Laptop, Windows 10 host, Inter core i5  (8 cores / 16 threads), 16 GB RAM|
+| Student | Baimagambet |
+| Pair |Working alone |
+| Machine | Laptop, Windows 10 host, Inter core i5  (8 cores / 16 threads), 16 GB RAM|
 |Guest|Ubuntu server 26.04 + Windows 10|
 |Date|01.11.2026|
 |Hyperbisor|Oreacle Virtual Box|
