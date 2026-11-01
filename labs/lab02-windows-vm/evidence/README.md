@@ -2,7 +2,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Student** | Baimagambet |
+| **Student** | Baimagambet Alikhan |
 | **Pair** | Working alone |
 | **Host Machine** | Laptop, Windows 10 |
 | **CPU** | Intel Core i5 (8 cores / 16 threads) |
