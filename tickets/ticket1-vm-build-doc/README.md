@@ -1,7 +1,11 @@
 # Ticket 1 — New developer starts Monday, needs a test machine
 
 ## 1. What was asked
-[Точная цитата письма]
+Hi, we have someone starting on Monday and he needs a test computer
+set up. Nothing special, just so he can try things without breaking
+anything. Can you write down how to do it so I can do the next one
+myself? Thanks
+
 
 ## 2. What was actually needed
 [Что пропущено, что неверно в просьбе, какие вопросы задали бы, какие допущения сделали]
