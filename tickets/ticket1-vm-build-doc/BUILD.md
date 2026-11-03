@@ -140,4 +140,69 @@ Step 7. Install Windows 11
 * In the VirtualBox menu: Devices → Insert Guest Additions CD image[cite: 1] *
 * Run the installer inside Windows and reboot when finished.[cite: 1] *
 
+## Step 8. Check that everything works
 
+### On Ubuntu[cite: 2, 3]
+
+```bash
+ip -br a
+ping -c 4 10.0.2.4    # should reach Windows
+ping -c 4 ubuntu.com  # should reach the internet
+```
+[cite: 2, 3]
+
+### On Windows (PowerShell)[cite: 2, 3]
+
+```powershell
+ipconfig
+ping 10.0.2.3         # should reach Ubuntu
+ping ubuntu.com       # should reach the internet
+```
+[cite: 2, 3]
+
+> **Firewall Troubleshooting:**  
+> If the ping from Ubuntu to Windows fails, open **PowerShell as Administrator** on Windows and run:[cite: 2, 3]
+> ```powershell
+> New-NetFirewallRule -DisplayName "Allow ping in (ICMPv4)" -Protocol ICMPv4 -IcmpType 8 -Direction Inbound -Action Allow
+> ```
+> Then try the ping again.[cite: 2, 3]
+
+---
+
+## Step 9. Take a clean snapshot[cite: 4]
+
+1. Completely shut down the Ubuntu machine (do not pause).[cite: 4]
+2. In VirtualBox, select `lab01-ubuntu`.[cite: 4]
+3. Click the **Snapshots** button (camera icon).[cite: 4]
+4. Click **Take**.[cite: 4]
+5. Name it exactly: `clean-install`[cite: 4]
+6. Click **OK**.[cite: 4]
+
+### How to roll back later[cite: 4]
+
+If the developer breaks the Ubuntu machine:[cite: 4]
+
+1. Shut down the virtual machine.[cite: 4]
+2. Open the **Snapshots** view.[cite: 4]
+3. Select `clean-install`.[cite: 4]
+4. Click **Restore**.[cite: 4]
+5. Confirm.[cite: 4]
+
+*The machine will return to the exact state it was in when the snapshot was taken.*[cite: 4]
+
+---
+
+## Quick reference[cite: 4]
+
+| Setting | Ubuntu | Windows 11 |
+| :--- | :--- | :--- |
+| **vCPU** | 2 | 2 |
+| **RAM** | 4 GB | 4 GB |
+| **Disk** | 25 GB dynamic | 64 GB dynamic |
+| **Network** | NAT Network | NAT Network |
+| **Firmware** | default | UEFI + Secure Boot + TPM 2.0 |
+| **Snapshot** | `clean-install` | — |
+
+[cite: 4]
+
+*That is everything needed to rebuild the test environment from scratch.*[cite: 4]
