@@ -8,17 +8,30 @@ myself? Thanks
 
 
 ## 2. What was actually needed
-[Что пропущено, что неверно в просьбе, какие вопросы задали бы, какие допущения сделали]
+1.Operation system
+2.How much RAM and CPU comnputer has
+3.Whether a snapshot / rollback point is required
 
 ## 3. What I did
-[Шаги по порядку, ключевые команды в блоках кода, каждое отличие от настроек по умолчанию с причиной, расчёт ресурсов от реальных цифр хоста]
+1.Chose VirtualBox as the hypervisor
+2.Created two virtual machines
+ubunt67 - Ubuntu Server 26.04.1 LTS, 2 vCPU, 4 GB RAM, 25 GB dynamic disk
+winbro - Windows 11 Enterprise Evaluation, 2 vCPU, 4 GB RAM, 64 GB dynamic disk, UEFI + Secure Boot + TPM
+3.Put both machines on the same NAT Network so they can talk to each other and still reach the internet.
+4.Added a Windows Firewall rule that allows ICMP (ping) without disabling the firewall.
+5.Verified connectivity in both directions and to the internet.
+6.Took a clean snapshot of the Ubuntu guest named clean-install.
+7.Wrote a detailed BUILD.md that a non-technical person can follow.
+
 
 ## 4. Evidence
-- `evidence/01-new-vm-wizard.png` — показывает …
-- `evidence/02-disk-settings.png` — показывает …
-- …
-- `evidence/05-ping-between-guests.txt` — доказывает, что гости видят друг друга
-- …
+- `evidence/01-new-vm-wizard.png` — shows the initial setting for the correct work
+- `evidence/02-disk-settings.png` — disk is 64 GB
+- `evidence/03-network-adapter.png` - Both guests are attached to the same NAT Network
+- `evidence/04-guest-uname.txt` - Ubuntu is running (uname -a + lsb_release -a)
+- `evidence/05-ping-between-guests.txt` — Evidence that guests can see each other
+- `evidence/06-snapshot-list.png` - Snapshot clean-install exists and can be restored
 
 ## 5. What I would do differently
-[Хотя бы одно конкретное улучшение. «Ничего» не принимается.]
+
+I would prepare a one-page “cheat sheet” with only the five most important clicks and the exact numbers (RAM, CPU, disk size). The full BUILD.md is correct, but for a person who is in a hurry it is still long. A one-page version would reduce the chance of skipping a critical step.
