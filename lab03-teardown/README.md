@@ -1,9 +1,9 @@
 # Lab 3 — Teardown, and the same machine from the command line
 
-**Pair:** [Surname1] / [Surname2]  
-**Driver first half:** [Name]  
-**Machine:** [Host OS and model], [Guest if used]  
-**Date:** DD.MM.YYYY
+**Pair:** [No pair] 
+**Driver first half:** [Baimagambet]  
+**Machine:** [Windows 10 laptop Asus vivobook 16, Intelcore i5, 16 GB RAM]
+**Date:** [10.11.2026]
 
 ## What I did
 
@@ -17,7 +17,8 @@
 
 ## 1. The ten parts
 
-All information comes from the official manufacturer pages (links below). Shop pages were not used as the primary source.
+All information comes from the official manufacturer pages ([links below](https://www.asus.com/ru/laptops/for-home/vivobook/asus-vivobook-s16-s3607/techspec/)). 
+Shop pages were not used as the primary source.
 
 ### Processors
 
