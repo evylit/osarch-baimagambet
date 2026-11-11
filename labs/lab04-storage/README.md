@@ -16,6 +16,7 @@ Reason: I checked it from a command stroke using diskpart, listdisk.
 What I did
 
 1.Layout - lsblk
+
 2. Partition two disks
 sudo parted /dev/sdb --script mklabel gpt mkpart primary 1MiB 100% set 1 raid on
 sudo parted /dev/sdc --script mklabel gpt mkpart primary 1MiB 100% set 1 raid on
