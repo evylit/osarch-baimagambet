@@ -1,1 +1,7 @@
+lab04@lab04:~$ cat /proc/mdstat
+Personalities : [raid1]
+md0 : active raid1 sdc1[1] sdb1[0]
+      3141632 blocks super 1.2 [2/2] [UU]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
 
+unused devices: <none>
