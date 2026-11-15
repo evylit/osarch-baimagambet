@@ -1,3 +1,7 @@
+
+
+
+
 # Lab 5 — Encoding forensics
 
 **Name:** Alikhan Baimagambet  
@@ -40,5 +44,9 @@ iconv -f RK1048 -t UTF-8 "$in" > "$out"
 
 # Convert CRLF → LF (optional, depending on preference)
 sed -i 's/\r$//' "$out"
+```
 
 
+# What did not work in the first time
+
+At first I tried to convert the file as Windows-1251. Russian names looked almost correct, but Kazakh letters (Ә, Қ, Ү, Ө) were wrong. After checking the hex dump and testing iconv -f RK1048, the Kazakh characters appeared correctly. This confirmed that the file uses the Kazakh code page KZ-1048, not Windows-1251.
