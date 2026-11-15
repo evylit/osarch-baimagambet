@@ -40,3 +40,5 @@ iconv -f RK1048 -t UTF-8 "$in" > "$out"
 
 # Convert CRLF → LF (optional, depending on preference)
 sed -i 's/\r$//' "$out"
+
+
