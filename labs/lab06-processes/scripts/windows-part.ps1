@@ -31,9 +31,11 @@ $parent = Get-CimInstance Win32_Process -Filter "ProcessId=$($c.ParentProcessId)
 # Step 10: resource-exhaustion events
 "Command: Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Windows-Resource-Exhaustion-Detector'} -MaxEvents 5" | Out-File "$out\windows-events.txt"
 try {
-  Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Windows-Resource-Exhaustion-Detector'} -MaxEvents 5 -ErrorAction Stop |
-    Format-List TimeCreated, Id, Message | Out-String | Tee-Object -Append "$out\windows-events.txt"
-} catch { "Result: $($_.Exception.Message)" | Tee-Object -Append "$out\windows-events.txt" }
+  $ev = Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Windows-Resource-Exhaustion-Detector'} -MaxEvents 5 -ErrorAction Stop |
+    Format-List TimeCreated, Id, Message | Out-String
+} catch { $ev = "Result: $($_.Exception.Message)" }
+$ev | Out-File -Append "$out\windows-events.txt"
+$ev
 
 Write-Host "`nNow, with $($p.ProcessName) PID $($p.Id):"
 Write-Host " 1) Task Manager -> Details, columns PID, Memory (private working set), Working set, Commit size, Handles, Threads -> screenshot task-manager.png"
