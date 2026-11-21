@@ -1,9 +1,9 @@
-# Lab 6 — Windows guest (lab002-windows, 32-bit). In an ADMIN PowerShell:
+# Lab 6 - Windows guest (lab002-windows, 32-bit). In an ADMIN PowerShell:
 #   powershell -ExecutionPolicy Bypass -File windows-part.ps1
 # Results go to Desktop\lab06.
 $out = "$env:USERPROFILE\Desktop\lab06"; New-Item -ItemType Directory -Force $out | Out-Null
 
-# Part 1: the same program as on Ubuntu — VBoxService if it runs, else python -m http.server 8000
+# Part 1: the same program as on Ubuntu - VBoxService if it runs, else python -m http.server 8000
 $p = Get-Process VBoxService -ErrorAction SilentlyContinue
 if (-not $p) {
   Write-Host "VBoxService not running -> starting python -m http.server 8000 (needs Python installed)"
@@ -37,6 +37,6 @@ try {
 
 Write-Host "`nNow, with $($p.ProcessName) PID $($p.Id):"
 Write-Host " 1) Task Manager -> Details, columns PID, Memory (private working set), Working set, Commit size, Handles, Threads -> screenshot task-manager.png"
-Write-Host " 2) Process Explorer (procexp.exe — this guest is 32-bit) as admin, columns Private Bytes, Working Set, WS Private, Handles, Threads,"
+Write-Host " 2) Process Explorer (procexp.exe - this guest is 32-bit) as admin, columns Private Bytes, Working Set, WS Private, Handles, Threads,"
 Write-Host "    View -> Lower Pane View -> Handles -> screenshot process-explorer.png"
 Write-Host "Save both PNGs into $out"
