@@ -1,11 +1,11 @@
 # Lab 6 — Live processes and memory pressure
 
-Pair: Baimagambet Alikhan + `<partner>` · Date: 21 November 2026 · Guests: Ubuntu `lab01-ubuntu` (kernel 7.0.0-43-generic, 2 CPU, RAM lowered 4 GB → 2 GB, no swap), Windows 10 32-bit `lab002-windows` (4 GB RAM)
+Done solo: Baimagambet Alikhan (no pair partner) · Date: 21 November 2026 · Guests: Ubuntu `lab01-ubuntu` (kernel 7.0.0-43-generic, 2 CPU, RAM lowered 4 GB → 2 GB, no swap), Windows 10 32-bit `lab002-windows` (4 GB RAM)
 
 ## Part 1 — One process, three tools
 
 **Process chosen:** `python -m http.server 8000` — Python's built-in web server, started on both guests (`python3` on Ubuntu, `python.exe` 3.14 32-bit on Windows).
-**Why:** the recommended VBoxService is not running in our Ubuntu guest (Guest Additions there do not start), so we used the second option from the guide: the same small program on both sides. It is one process with one listening socket, so the numbers are easy to compare.
+**Why:** the recommended VBoxService is not running in my Ubuntu guest (Guest Additions there do not start), so I used the second option from the guide: the same small program on both sides. It is one process with one listening socket, so the numbers are easy to compare.
 
 | | Task Manager | Process Explorer | htop / ps |
 |---|---|---|---|
@@ -22,12 +22,12 @@ Evidence: `evidence/task-manager.png`, `evidence/process-explorer.png`, `evidenc
 
 ### Where the tools disagree
 
-1. **Parent process.** Task Manager does not show the parent at all. Process Explorer shows the parent as the line above, one level to the left — but our `python.exe` is drawn at the **left edge with no parent**, because the `powershell.exe` (5468) that started it had already exited. Windows does not re-parent orphans; it only remembers the parent PID (PowerShell's `Win32_Process.ParentProcessId` still says 5468). On Linux, `ps` shows a live parent `bash (1759)`; had that bash died, the kernel would have re-parented python3 to `systemd (1)`.
+1. **Parent process.** Task Manager does not show the parent at all. Process Explorer shows the parent as the line above, one level to the left — but my `python.exe` is drawn at the **left edge with no parent**, because the `powershell.exe` (5468) that started it had already exited. Windows does not re-parent orphans; it only remembers the parent PID (PowerShell's `Win32_Process.ParentProcessId` still says 5468). On Linux, `ps` shows a live parent `bash (1759)`; had that bash died, the kernel would have re-parented python3 to `systemd (1)`.
 2. **"Memory" means different things.** Task Manager's default *Memory* column is the **private working set** (8,184 K: private pages in RAM). htop's **RES** (22,528 K) is the whole resident set, including shared, file-backed pages: `/proc/2196/status` splits it into `RssAnon 11,724 kB` + `RssFile 10,804 kB` (the python binary and shared libraries such as libc). So RES is almost 3× the Windows "Memory" figure for the same program — they measure different things.
 3. **Same thing, different names.** Task Manager's **Commit size** and Process Explorer's **Private Bytes** are the same number (9,116 K) under two names. htop has no column for it; the closest Linux figure is `RssAnon`, and that counts only the part that is in RAM.
 4. **VIRT is not memory in use.** htop VIRT is 35,404 K vs RES 22,528 K: VIRT is the whole mapped address space, including parts never touched.
 5. **Handles vs. file descriptors: 96 vs 4.** Windows counts *handles* to every kind of kernel object — Process Explorer's lower pane lists directories, `\Device\ConDrv`, `\Device\Afd` (the socket), registry keys (`HKLM`, `HKCU`…), the window station, events… Linux counts only *file descriptors*: stdin/stdout/stderr (`/dev/null`) and one `socket:[17001]`.
-6. **The numbers move.** Our PowerShell script read the same process 3 seconds after it started and got **Handles 100, Threads 2, Private 9,132 K**; minutes later both Windows tools showed **96, 1, 9,116 K**. Python's start-up thread had finished and released its handles. That is why all tools have to be read at the same moment.
+6. **The numbers move.** My PowerShell script read the same process 3 seconds after it started and got **Handles 100, Threads 2, Private 9,132 K**; minutes later both Windows tools showed **96, 1, 9,116 K**. Python's start-up thread had finished and released its handles. That is why all tools have to be read at the same moment.
 
 ## Part 2 — Memory pressure
 
@@ -85,12 +85,12 @@ Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Window
 
 Result: `No events were found that match the specified selection criteria.` (see `evidence/windows-events.txt`)
 
-Explanation: Windows has no OOM killer. When the **commit charge** gets close to the **commit limit** (RAM + page file), the Resource-Exhaustion-Detector writes **event ID 2004** ("Windows successfully diagnosed a low virtual memory condition") and names the processes that use the most memory. Windows does not kill them: new allocations fail, and programs crash or show "out of memory" errors themselves. Our Windows guest never got close: Process Explorer's status bar showed **Commit Charge 27–28 %** during the lab. So the query correctly returned nothing. We would expect event 2004 if we ran Sysinternals `testlimit -d 512` until the page file was full.
+Explanation: Windows has no OOM killer. When the **commit charge** gets close to the **commit limit** (RAM + page file), the Resource-Exhaustion-Detector writes **event ID 2004** ("Windows successfully diagnosed a low virtual memory condition") and names the processes that use the most memory. Windows does not kill them: new allocations fail, and programs crash or show "out of memory" errors themselves. My Windows guest never got close: Process Explorer's status bar showed **Commit Charge 27–28 %** during the lab. So the query correctly returned nothing. I would expect event 2004 if I ran Sysinternals `testlimit -d 512` until the page file was full.
 
 ## What did not work the first time
 
-1. **The Windows process disappeared between screenshots.** The script started `python -m http.server` in its own minimized console window. While tidying the desktop we closed that window, and PID 2748 was gone before Process Explorer showed its handles. We restarted it (new PID **5324**) and re-took both Windows screenshots so that Task Manager and Process Explorer show the same PID.
-2. **Our Windows helper script did not parse** in the guest's old Windows PowerShell: the file was UTF-8 without BOM and contained an em dash ("—"). PowerShell read it as ANSI, and one of the bytes turned into a typographic quote that ended a string early (`The string is missing the terminator`). Fix: ASCII-only script.
+1. **The Windows process disappeared between screenshots.** The script started `python -m http.server` in its own minimized console window. While tidying the desktop I closed that window, and PID 2748 was gone before Process Explorer showed its handles. I restarted it (new PID **5324**) and re-took both Windows screenshots so that Task Manager and Process Explorer show the same PID.
+2. **My Windows helper script did not parse** in the guest's old Windows PowerShell: the file was UTF-8 without BOM and contained an em dash ("—"). PowerShell read it as ANSI, and one of the bytes turned into a typographic quote that ended a string early (`The string is missing the terminator`). Fix: ASCII-only script.
 3. **Process Explorer showed "Access denied"** for some process paths because it was not started as administrator.
 4. **120% was not enough for the OOM killer.** Even with RAM lowered to 2 GB and no swap, the kernel survived 120% by dropping page cache, with a ~26 s stall. Only at **150%** did it run out of memory and log `Out of memory: Killed process`.
-5. **No clipboard into the guests** (Guest Additions not running), so commands could not be pasted. We downloaded the scripts from this repo with `wget` / `Invoke-WebRequest` and moved the Linux results to the host through a VirtualBox NAT port-forward (`python3 -m http.server 8080` in the guest).
+5. **No clipboard into the guests** (Guest Additions not running), so commands could not be pasted. I downloaded the scripts from this repo with `wget` / `Invoke-WebRequest` and moved the Linux results to the host through a VirtualBox NAT port-forward (`python3 -m http.server 8080` in the guest).
