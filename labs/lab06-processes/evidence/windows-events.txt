@@ -1,0 +1,6 @@
+Command: Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Windows-Resource-Exhaustion-Detector'} -MaxEvents 5
+
+Result: No events were found that match the specified selection criteria.
+
+(run twice on the Windows 10 guest, 11/21/2026 8:29 AM and 9:00 AM guest time - same result both times;
+transcribed from the guest console)

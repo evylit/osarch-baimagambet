@@ -1,0 +1,15 @@
+PS C:\Users\lab002> powershell -ep bypass -f $env:TEMP\w.ps1
+VBoxService not running -> starting python -m http.server 8000 (needs Python installed)
+
+Time           : 11/21/2026 9:00:47 AM
+Name           : python
+PID            : 5324
+Parent         : powershell.exe (5468)
+CommandLine    : "C:\Users\lab002\AppData\Local\Programs\Python\Python314-32\python.exe" -m http.server 8000
+WorkingSetKB   : 16488
+PrivateBytesKB : 9132
+VirtualSizeMB  : 60
+Handles        : 100
+Threads        : 2
+
+(transcribed from the Windows guest console; the guest has no shared folder / clipboard)

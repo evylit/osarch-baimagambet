@@ -1,0 +1,52 @@
+=== 16:11:15 START stress-ng --vm 2 --vm-bytes 70% --timeout 60s ===
+stress-ng: info:  [2237] setting to a 1 min run per stressor
+stress-ng: info:  [2237] dispatching hogs: 2 vm
+stress-ng: info:  [2240] vm: using 209.11MB per stressor instance (total 418.21MB of 597.45MB available memory)
+stress-ng: metrc: [2237] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2237]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2237] vm              2410982     60.03    113.86      5.40     40160.73       20216.10
+stress-ng: info:  [2237] skipped: 0
+stress-ng: info:  [2237] passed: 2: vm (2)
+stress-ng: info:  [2237] failed: 0
+stress-ng: info:  [2237] metrics untrustworthy: 0
+stress-ng: info:  [2237] successful run completed in 1 min
+=== 16:12:15 END 70% ===
+=== 16:12:25 START stress-ng --vm 2 --vm-bytes 90% --timeout 60s ===
+stress-ng: info:  [2450] setting to a 1 min run per stressor
+stress-ng: info:  [2450] dispatching hogs: 2 vm
+stress-ng: info:  [2452] vm: using 299.01MB per stressor instance (total 598.03MB of 664.48MB available memory)
+stress-ng: metrc: [2450] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2450]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2450] vm              3434023     60.09    111.04      8.31     57150.29       28773.02
+stress-ng: info:  [2450] skipped: 0
+stress-ng: info:  [2450] passed: 2: vm (2)
+stress-ng: info:  [2450] failed: 0
+stress-ng: info:  [2450] metrics untrustworthy: 0
+stress-ng: info:  [2450] successful run completed in 1 min
+=== 16:13:25 END 90% ===
+=== 16:13:35 START stress-ng --vm 2 --vm-bytes 120% --timeout 90s ===
+stress-ng: info:  [2533] setting to a 1 min 30 secs run per stressor
+stress-ng: info:  [2533] dispatching hogs: 2 vm
+stress-ng: info:  [2535] vm: using 420.85MB per stressor instance (total 841.69MB of 701.41MB available memory)
+stress-ng: metrc: [2533] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2533]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2533] vm              4823584     90.06    163.61     14.40     53560.18       27097.30
+stress-ng: info:  [2533] skipped: 0
+stress-ng: info:  [2533] passed: 2: vm (2)
+stress-ng: info:  [2533] failed: 0
+stress-ng: info:  [2533] metrics untrustworthy: 0
+stress-ng: info:  [2533] successful run completed in 1 min 30.06 secs
+=== 16:15:05 END 120% ===
+=== 16:15:15 START stress-ng --vm 2 --vm-bytes 150% --timeout 90s ===
+stress-ng: info:  [2636] setting to a 1 min 30 secs run per stressor
+stress-ng: info:  [2636] dispatching hogs: 2 vm
+stress-ng: info:  [2638] vm: using 742.18MB per stressor instance (total 1.45GB of 989.57MB available memory)
+stress-ng: metrc: [2636] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2636]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2636] vm               516553     90.25     62.83    102.14      5723.42        3131.22
+stress-ng: info:  [2636] skipped: 0
+stress-ng: info:  [2636] passed: 2: vm (2)
+stress-ng: info:  [2636] failed: 0
+stress-ng: info:  [2636] metrics untrustworthy: 0
+stress-ng: info:  [2636] successful run completed in 1 min 30.31 secs
+=== 16:16:46 END 150% ===
