@@ -1,0 +1,51 @@
+role,component,model,price_kzt,source,date
+accountant,CPU,AMD Ryzen 5 5500GT AM4 OEM (6C/12T + Radeon graphics),83500,https://shop.kz/offer/protsessor-amd-ryzen-5-5500gt-am4-oem/,2026-11-22
+accountant,Motherboard,ASUS Prime B550M-A AM4 (4x DDR4 / 2x M.2),52990,https://shop.kz/offer/materinskaya-plata-asus-prime-b550m-a-am4/,2026-11-22
+accountant,Memory,Hiksemi Armor DDR4-3200 16 GB (2x8 GB) HSC416U32D3,66990,https://shop.kz/offer/ddr-4-udimm-16-gb-3200-mhz-hiksemi-armor-2x-8-gb-kit-box-hsc416u32d3/,2026-11-22
+accountant,SSD,Netac NV3000 1 TB M.2 NVMe PCIe 3.0,76990,https://shop.kz/offer/ssd-nakopitel-1-tb-netac-nv3000-m-2-pcie-3-0/,2026-11-22
+accountant,Cooler,DeepCool AG200 (133 mm),5990,https://shop.kz/offer/kuler-deepcool-ag200/,2026-11-22
+accountant,Case,DeepCool Matrexx 30 mATX,16200,https://shop.kz/offer/korpus-deepcool-matrexx-30-black/,2026-11-22
+accountant,PSU,MSI MAG A650BN 650 W 80+ Bronze,24590,https://shop.kz/offer/blok-pitaniya-atx-650-w-msi-mag-a650bn/,2026-11-22
+accountant,OS,Microsoft Windows 11 Professional 64-bit (OEM DVD),102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-22
+accountant,Monitor,Xiaomi A27Qi 2026 27in IPS 2560x1440,84990,https://shop.kz/offer/monitor-27-xiaomi-a27qi-2026-black/,2026-11-22
+accountant,Keyboard+mouse,Logitech MK120 USB,8990,https://shop.kz/offer/klaviatura-logitech-mk120-black-usb-mysh/,2026-11-22
+accountant,UPS,APC Back-UPS BV650I-GR 650 VA,36990,https://shop.kz/offer/ups-apc-back-bv650i-gr/,2026-11-22
+accountant,TOTAL,,561210,,
+sales,CPU,AMD Ryzen 5 5500GT AM4 OEM (6C/12T + Radeon graphics),83500,https://shop.kz/offer/protsessor-amd-ryzen-5-5500gt-am4-oem/,2026-11-22
+sales,Motherboard,ASUS Prime B550M-A AM4 (4x DDR4 / 2x M.2),52990,https://shop.kz/offer/materinskaya-plata-asus-prime-b550m-a-am4/,2026-11-22
+sales,Memory,AMD Radeon R9 Gamer DDR4-3200 32 GB (2x16 GB) R9S432G3206U2K,152990,https://shop.kz/offer/ddr-4-dimm-32-gb-3200-mhz-amd-radeon-r9-gamer-2x-16-gb-kit-box-r9s432g3206u2k/,2026-11-22
+sales,SSD,Netac NV3000 1 TB M.2 NVMe PCIe 3.0,76990,https://shop.kz/offer/ssd-nakopitel-1-tb-netac-nv3000-m-2-pcie-3-0/,2026-11-22
+sales,Cooler,DeepCool AG200 (133 mm),5990,https://shop.kz/offer/kuler-deepcool-ag200/,2026-11-22
+sales,Case,DeepCool Matrexx 30 mATX,16200,https://shop.kz/offer/korpus-deepcool-matrexx-30-black/,2026-11-22
+sales,PSU,MSI MAG A650BN 650 W 80+ Bronze,24590,https://shop.kz/offer/blok-pitaniya-atx-650-w-msi-mag-a650bn/,2026-11-22
+sales,OS,Microsoft Windows 11 Professional 64-bit (OEM DVD),102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-22
+sales,Monitor,iiyama ProLite XU2493HSU-B7 24in IPS 1920x1080,65990,https://shop.kz/offer/monitor-24-iiyama-prolite-xu2493hsu-b7-black/,2026-11-22
+sales,Keyboard+mouse,Logitech MK120 USB,8990,https://shop.kz/offer/klaviatura-logitech-mk120-black-usb-mysh/,2026-11-22
+sales,Webcam,Logitech Brio 100,20890,https://shop.kz/offer/web-kamera-logitech-brio-100-graphite/,2026-11-22
+sales,Headset,Logitech H390 USB,16690,https://shop.kz/offer/garnitura-logitech-h390-black/,2026-11-22
+sales,TOTAL,,628800,,
+webdev,CPU,AMD Ryzen 7 7700 AM5 OEM (8C/16T + Radeon graphics),100990,https://shop.kz/offer/protsessor-amd-ryzen-7-7700-am5-oem/,2026-11-22
+webdev,Motherboard,MSI PRO B650M-P AM5 (4x DDR5 / 2x M.2 PCIe 4.0),61990,https://shop.kz/offer/materinskaya-plata-msi-pro-b650m-p-am5/,2026-11-22
+webdev,Memory,AMD Radeon R5 Gamer DDR5-5600 32 GB (2x16 GB) R5S532G5600U1K,282990,https://shop.kz/offer/ddr-5-dimm-32-gb-5600-mhz-amd-radeon-r5-gamer-2x-16-gb-kit-box-r5s532g5600u1k/,2026-11-22
+webdev,SSD,MSI Spatium M470 Pro 1 TB M.2 NVMe PCIe 4.0,96990,https://shop.kz/offer/ssd-nakopitel-1-tb-msi-spatium-m470-pro-m-2-pcie-4-0/,2026-11-22
+webdev,Cooler,DeepCool AG200 (133 mm),5990,https://shop.kz/offer/kuler-deepcool-ag200/,2026-11-22
+webdev,Case,DeepCool Matrexx 30 mATX,16200,https://shop.kz/offer/korpus-deepcool-matrexx-30-black/,2026-11-22
+webdev,PSU,MSI MAG A650BN 650 W 80+ Bronze,24590,https://shop.kz/offer/blok-pitaniya-atx-650-w-msi-mag-a650bn/,2026-11-22
+webdev,OS,Ubuntu 26.04 LTS Desktop (free licence - GPL / Canonical IP policy),0,https://ubuntu.com/download/desktop,2026-11-22
+webdev,Monitor,Xiaomi A27Qi 2026 27in IPS 2560x1440,84990,https://shop.kz/offer/monitor-27-xiaomi-a27qi-2026-black/,2026-11-22
+webdev,Keyboard+mouse,Logitech MK120 USB,8990,https://shop.kz/offer/klaviatura-logitech-mk120-black-usb-mysh/,2026-11-22
+webdev,TOTAL,,683720,,
+designer,CPU,AMD Ryzen 5 7500F AM5 OEM (6C/12T no graphics),69990,https://shop.kz/offer/protsessor-amd-ryzen-5-7500f-am5-oem/,2026-11-22
+designer,Motherboard,MSI PRO B650M-P AM5 (4x DDR5 / 2x M.2 PCIe 4.0),61990,https://shop.kz/offer/materinskaya-plata-msi-pro-b650m-p-am5/,2026-11-22
+designer,Memory,AMD Radeon R5 Gamer DDR5-5600 32 GB (2x16 GB) R5S532G5600U1K,282990,https://shop.kz/offer/ddr-5-dimm-32-gb-5600-mhz-amd-radeon-r5-gamer-2x-16-gb-kit-box-r5s532g5600u1k/,2026-11-22
+designer,GPU,Gigabyte GeForce RTX 5060 Windforce OC 8 GB (199 mm),329990,https://shop.kz/offer/videokarta-gigabyte-rtx-5060-windforce-oc-8-gb-geforse-rtx-5060/,2026-11-22
+designer,SSD,MSI Spatium M470 Pro 1 TB M.2 NVMe PCIe 4.0,96990,https://shop.kz/offer/ssd-nakopitel-1-tb-msi-spatium-m470-pro-m-2-pcie-4-0/,2026-11-22
+designer,Cooler,DeepCool AG200 (133 mm),5990,https://shop.kz/offer/kuler-deepcool-ag200/,2026-11-22
+designer,Case,DeepCool Matrexx 30 mATX,16200,https://shop.kz/offer/korpus-deepcool-matrexx-30-black/,2026-11-22
+designer,PSU,MSI MAG A650BN 650 W 80+ Bronze,24590,https://shop.kz/offer/blok-pitaniya-atx-650-w-msi-mag-a650bn/,2026-11-22
+designer,OS,Microsoft Windows 11 Professional 64-bit (OEM DVD),102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-22
+designer,Monitor,Xiaomi A27Qi 2026 27in IPS 2560x1440 100% sRGB / 95% DCI-P3,84990,https://shop.kz/offer/monitor-27-xiaomi-a27qi-2026-black/,2026-11-22
+designer,Keyboard+mouse,Logitech MK120 USB,8990,https://shop.kz/offer/klaviatura-logitech-mk120-black-usb-mysh/,2026-11-22
+designer,TOTAL,,1085700,,
+all,GRAND TOTAL,,2959430,,
+all,RESERVE (budget minus grand total),,40570,,
