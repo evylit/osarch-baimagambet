@@ -1,6 +1,6 @@
 # Lab 6 — Live processes and memory pressure
 
-Done solo: Baimagambet Alikhan (no pair partner) · Date: 21 November 2026 · Guests: Ubuntu `lab01-ubuntu` (kernel 7.0.0-43-generic, 2 CPU, RAM lowered 4 GB → 2 GB, no swap), Windows 10 32-bit `lab002-windows` (4 GB RAM)
+Done solo: Baimagambet Alikhan · Date: 21 November 2026 · Guests: Ubuntu `lab01-ubuntu` (kernel 7.0.0-43-generic, 2 CPU, RAM lowered 4 GB → 2 GB, no swap), Windows 10 32-bit `lab002-windows` (4 GB RAM)
 
 ## Part 1 — One process, three tools
 
